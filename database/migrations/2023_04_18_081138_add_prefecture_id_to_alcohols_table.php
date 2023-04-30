@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('alcohols', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('alcohols', function (Blueprint $table) {
+            $table->foreignId('prefecture_id')->nullable()->constrained();
         });
     }
 
@@ -26,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alcohols');
+        Schema::table('alcohols', function (Blueprint $table) {
+            //
+        });
     }
 };

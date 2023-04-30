@@ -9,6 +9,8 @@ class AlcoholController extends Controller
 {
     public function index(Alcohol $alcohol)
     {
+        $id=1;
+        dd($alcohol->first()->country);
      return $alcohol->get();   
     }
         
