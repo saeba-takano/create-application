@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlcoholController;
+use App\Http\Controllers\FlontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,14 @@ use App\Http\Controllers\AlcoholController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',function(){
+Route::get('/flont', function(){
     return view('flont/flont');
 });
-/*
+
+Route::get('/', [FlontController::class, 'flont'])->name('flont');
+
 Route::get('/alcohol', [AlcoholController::class, 'alcohol'])->name('alcohol');
-*/
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
