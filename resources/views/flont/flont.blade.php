@@ -31,7 +31,7 @@
         <div>
            <p>度数で探す</p><!--詳細表示用bladeファイルを作成-->
         </div>
-        <a href="/posts/create">お酒を追加/コメントを投稿</a><!--create.bladeへ移動-->
+        <a href="/posts/add_alcohol">お酒を追加/コメントを投稿</a><!--add_alcohol.bladeへ移動-->
         
         
        

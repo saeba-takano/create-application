@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlcoholController;
 use App\Http\Controllers\FlontController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,14 @@ use App\Http\Controllers\FlontController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/flont', function(){
-    return view('flont/flont');
-});
 
-Route::get('/', [FlontController::class, 'flont'])->name('flont');
+Route::get('/',[FlontController::class,'flont'])->name('flont');
+
+Route::get('/posts/add_alcohol',[PostController::class,'add_alcohol'])->middleware(['auth'])->name('add_alcohol');
+Route::get('/posts/add_comment',[PostController::class,'add_comment'])->middleware(['auth'])->name('add_alcohol');
+
+Route::post('/posts',[PostController::class,'store']);
+Route::get('/posts/{post}/edit',[PostController::class,'edit']);
 
 Route::get('/alcohol', [AlcoholController::class, 'alcohol'])->name('alcohol');
 

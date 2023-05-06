@@ -6,25 +6,24 @@
         <title>minnnanosakagura</title>
         <!-- Fonts -->
     </head>
-     <x-app-layout>
+    <x-app-layout>
             <x-slot name="header">
                 みんなの酒蔵
             </x-slot>
     <body>
-        <form action="/posts/{{ $post->id }}" method="POST">
+        <h1>コメントの投稿</h1>
+        <form action="/posts" method="POST">
             @csrf
-            @method('PUT')
-            <div class="alcohol_name">
-                <h2>{{$alcohol->name}}</h2>
+            <div class="name">
+                <h2>お酒の名前</h2>
             </div>
             <div class="comment">
                 <h2>コメント</h2>
-                <textarea name="post[comment]" placeholder="コメントを入力してください。" >{{ $post->comment }}</textarea>
-                </textarea>
+                <textarea name="post[comment]" placeholder="どんな味？" value={{ old('post.comment')}}></textarea>
                 <p class="comment_error" style="color:red">{{$errors->first('post.comment')}}</p>
             </div>
-            <input type="submit" value="update"/>
+            <input type="submit" value="投稿"/>
         <div class="footer">
-            <a href="/posts/{{ $post->id }}">戻る</a>
+            <a href="/">ホームに戻る</a>
     </body>
     </x-app-layout>

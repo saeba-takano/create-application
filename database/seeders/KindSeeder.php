@@ -21,11 +21,65 @@ class KindSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
                ]);
-        
+               
         DB::table('kinds')->insert([
-            'kind_name'=>'ウォッカ',
-            'created_at'=> new DateTime(),
-            'updated_at'=>new Datetime(),
-            ]);
+            'kind_name' => 'スピリッツ',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => 'ワイン',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+            
+        DB::table('kinds')->insert([
+            'kind_name' => '日本酒',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => '焼酎',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => 'ビール',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => '梅酒',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => '果実酒',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+             
+        DB::table('kinds')->insert([
+            'kind_name' => 'リキュール',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => 'カクテル',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
+               
+        DB::table('kinds')->insert([
+            'kind_name' => 'その他',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
     }
 }
