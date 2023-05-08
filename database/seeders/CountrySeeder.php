@@ -448,6 +448,12 @@ class CountrySeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
                ]);
+        
+         DB::table('countries')->insert([
+            'country_name' => 'スコットランド',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+               ]);
                
         DB::table('countries')->insert([
             'country_name' => 'スペイン',

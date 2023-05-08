@@ -12,10 +12,15 @@
             </x-slot>
     <body>
         <h1>コメントの投稿</h1>
-        <form action="/posts" method="POST">
+        <form action="/posts/add_comment" method="POST">
             @csrf
-            <div class="name">
+           <div class='alcohol'>
                 <h2>お酒の名前</h2>
+                <select name="post[alcohol_id]">
+                    @foreach($alcohols as $alcohol)
+                        <option value="{{$alcohol->id}}">{{$alcohol->alcohol_name}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="comment">
                 <h2>コメント</h2>

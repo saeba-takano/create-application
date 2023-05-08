@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlcoholController;
 use App\Http\Controllers\FlontController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\KindController;
+use App\Http\Controllers\CountryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +21,12 @@ use App\Http\Controllers\PostController;
 
 Route::get('/',[FlontController::class,'flont'])->name('flont');
 
-Route::get('/posts/add_alcohol',[PostController::class,'add_alcohol'])->middleware(['auth'])->name('add_alcohol');
+Route::get('/posts/add_alcohol',[AlcoholController::class,'add_alcohol'])->middleware(['auth'])->name('add_alcohol');
 Route::get('/posts/add_comment',[PostController::class,'add_comment'])->middleware(['auth'])->name('add_alcohol');
+Route::post('/posts/add_alcohol',[AlcoholController::class,'store'])->name('store');
+Route::post('/posts/add_comment',[PostController::class,'store'])->name('store');
+Route::get('/posts/{post}',[PostController::class,'show'])->name('show');
 
-Route::post('/posts',[PostController::class,'store']);
 Route::get('/posts/{post}/edit',[PostController::class,'edit']);
 
 Route::get('/alcohol', [AlcoholController::class, 'alcohol'])->name('alcohol');
