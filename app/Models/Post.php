@@ -39,6 +39,7 @@ class Post extends Model
 		'votes',
 		'alcohol_id'
 	];
+	
 
 	public function alcohol()
 	{

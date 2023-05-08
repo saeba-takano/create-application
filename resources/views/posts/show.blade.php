@@ -15,17 +15,16 @@
                 みんなの酒蔵
             </x-slot>
     <body>
-        <h1 class="alcohol_name">
-            {{$alcohol->name}}
-        </h1>
+        <div>
+        <a href="">{{$post->alcohol->name}}</a>
+        </div>
         <div class="comment">
             <div class="comment_post">
                 <p>{{$post->comment}}</p> 
-                <a href="/alcohols/{{$post->alcohol->id}}">{{$post->alcohol->name}}</a>
             </div>
         </div>
         <div class="edit">
-            <a href="/posts/{{ $post->id }}/edit">編集</a></a>
+            <a href="/posts/{{ $post->id }}/edit">編集</a>
         </div>
         <div class="footer">
             <a href="/">ホームに戻る</a>
