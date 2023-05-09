@@ -18,12 +18,18 @@
         </div>
         <div class="kinds">
             <h2 class="kind_title">種類で調べる</h2>
+            @foreach($kinds as $kind)
+                <a href="kind/{{$kind->id}}">{{$kind->kind_name}}</a>
+            @endforeach
         </div>
         <div class="Japan">
             <a href="/prefectures">日本のお酒</a>  <!--詳細表示用bladeファイルを作成-->
         </div>
         <div class="Country">
-            <a href="/countries">世界のお酒</a> 
+            <h2>国・地域</h2> 
+             @foreach($countries as $country)
+                <a href="countries/{{$country->id}}">{{$country->country_name}}</a>
+            @endforeach
         </div><!--詳細表示用bladeファイルを作成-->
         <div class="hashtag">
             <p>#で探す</p><!--詳細表示用bladeファイルを作成-->

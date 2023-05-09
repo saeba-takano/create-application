@@ -10,9 +10,9 @@ use App\Models\Post;
 
 class AlcoholController extends Controller
 {
-    public function index(Alcohol $alcohol)
+    public function alcohol(Alcohol $alcohol,Post $post)
     {
-     return $alcohol->get();   
+        return view('/alcohols/alcohol')->with(['alcohol'=>$alcohol,'alcohols'=>$alcohol->posts()->get()]);
     }
     
     

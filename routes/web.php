@@ -27,9 +27,11 @@ Route::post('/posts/add_alcohol',[AlcoholController::class,'store'])->name('stor
 Route::post('/posts/add_comment',[PostController::class,'store'])->name('store');
 Route::get('/posts/{post}',[PostController::class,'show'])->name('show');
 
+Route::get('/kind/{kind}',[KindController::class,'kind'])->name('kind');
+
 Route::get('/posts/{post}/edit',[PostController::class,'edit']);
 
-Route::get('/alcohol', [AlcoholController::class, 'alcohol'])->name('alcohol');
+Route::get('/alcohols/{alcohol}', [AlcoholController::class, 'alcohol'])->name('alcohol');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
