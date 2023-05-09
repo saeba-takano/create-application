@@ -23,9 +23,9 @@ class PostController extends Controller
         return redirect('/posts/'. $post->id);
     }
     
-    public function show(Post $post)
+    public function show(Post $post,Alcohol $alcohol)
     {
-        return view('posts/show')->with(['post' => $post]);
+        return view('posts/show')->with(['post' => $post])->with(['alcohol'=>$alcohol]);
     }
     
     

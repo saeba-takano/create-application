@@ -16,7 +16,9 @@
             </x-slot>
     <body>
         <div>
-        <a href="">{{$post->alcohol->name}}</a>
+            <h2 class="alcohol_name">
+                {{$post->alcohol->alcohol_name}}
+            </h2>
         </div>
         <div class="comment">
             <div class="comment_post">
